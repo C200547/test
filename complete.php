@@ -8,7 +8,7 @@
   $dbh = db_conn();
   try{ 
 	$sql = "INSERT INTO user (email, name, gender) VALUE (:email, :name, :gender)"; 
-	$stmt = $pdo->prepare($sql);  
+	$stmt = $dbh->prepare($sql);  
 	$stmt->bindValue(':email', $hobby, PDO::PARAM_STR); 
 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);[名前のプレースホルダーに値をバインド]; 
 	$stmt->bindValue(':gender', $gender, PDO::PARAM_INT);[性別のプレースホルダーに値をバインド]; 
