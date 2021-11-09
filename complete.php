@@ -1,5 +1,6 @@
 <?php
   session_start();
+  require_once("functions.php");
 
   $name = $_SESSION['name'];
   $hobby = $_SESSION['email'];
@@ -17,7 +18,7 @@
      }catch (PDOException $e){ 
 	echo($e->getMessage()); 
 	die(); 
-    } 
+    }
 ?>
 
 <!DOCTYPE html>
